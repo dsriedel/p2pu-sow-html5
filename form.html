@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>HTML5 Browser Tournament - Form</title>
+    
 </head>
 <body>
 
@@ -13,9 +14,13 @@
         <h2>A form</h2>
 
         <form>
-            <label for="emailaddress">Email:</label><input id="emailaddress" name="emailaddress" type="email" placeholder="me@example.com">
-            <label for="firstname">Field with autofocus enabled:</label><input id="firstname" name="firstname" type="text" placeholder="Your firstname" autofocus="">
-            <label for="favorite">Send us your favorite HTML5 page:</label><input id="favorite" name="favorite" type="url" placeholder="localhost">
+            <div><label for="emailaddress">Email:</label><input id="emailaddress" name="emailaddress" type="email" placeholder="me@example.com"></div>
+            <div><label for="firstname">Field with autofocus enabled:</label><input id="firstname" name="firstname" type="text" placeholder="Your firstname" autofocus=""></div>
+            <div><label for="favorite">Send us your favorite HTML5 page:</label><input id="favorite" name="favorite" type="url" placeholder="localhost"></div>
+
+            <div><label>To enter a number:</label><input id="number" name="number" type="number" min="0" max="10" step="2" value="6"></div>
+            <div><a href="javascript:number.stepUp(1);">Step up by 2</a></div>
+            <div><a href="javascript:number.stepDown(1);">Step down by 2</a></div>
             <input type="submit" value="Send">
         </form>
 
