@@ -4,7 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>HTML5 Browser Tournament - Form</title>
-    
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fixtures.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("#userrangevalue").html(ratingValues[4]);
+        });
+    </script>
 </head>
 <body>
 
@@ -21,6 +28,19 @@
             <div><label>To enter a number:</label><input id="number" name="number" type="number" min="0" max="10" step="2" value="6"></div>
             <div><a href="javascript:number.stepUp(1);">Step up by 2</a></div>
             <div><a href="javascript:number.stepDown(1);">Step down by 2</a></div>
+
+            <div>
+                <label for="rangevalue">Your opinion about IE9 Beta:</label>
+                <input id="rangevalue" type="range" min="0" max="8" step="2" value="4">
+                <span id="userrangevalue"></span>
+            </div>
+            <script type="text/javascript">
+                jQuery("#rangevalue").change(function() {
+                    var value = jQuery("#rangevalue").val();
+                    jQuery("#userrangevalue").html(ratingValues[value]);
+                });
+            </script>
+
             <input type="submit" value="Send">
         </form>
 
