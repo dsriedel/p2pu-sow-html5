@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+
+        .drag {
+            -khtml-user-drag: element;
+        }
+
+        #drop { border: dashed 4px #CCC; width: 150px; height: 150px; }
+
+    </style>
+
+    <!-- Script taken form html5doctor.com -->
+    <script src="js/h5utils.js"></script>
+</head>
+<body>
+
+<div id="canvas" class="drag" draggable="true">Canvas</div>
+<div id="geolocation" class="drag" draggable="true">Geolocation</div>
+
+<div id="drop"></div>
+<div id="related"></div>
+
+<!-- Script taken form html5doctor.com -->
+
+<script>
+function cancel(e) {
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  return false;
+}
+
+var dragItems = document.querySelectorAll('[draggable=true]');
+
+for (var i = 0; i < dragItems.length; i++) {
+  addEvent(dragItems[i], 'dragstart', function (event) {
+    // store the ID of the element, and collect it on the drop later on
+    event.dataTransfer.setData('Text', this.id);
+  });
+}
+
+var drop = document.querySelector('#drop');
+
+// Tells the browser that we *can* drop on this target
+addEvent(drop, 'dragover', cancel);
+addEvent(drop, 'dragenter', cancel);
+
+addEvent(drop, 'drop', function (e) {
+  if (e.preventDefault) e.preventDefault(); // stops the browser from redirecting off to the text.
+
+  this.innerHTML += '<p>' + e.dataTransfer.getData('Text') + '</p>';
+  return false;
+});
+</script>
+
+</body>
+</html>
