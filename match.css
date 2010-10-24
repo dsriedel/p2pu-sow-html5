@@ -1,0 +1,83 @@
+*{
+margin:0px;
+padding:0px;
+}
+
+header, section, footer,
+aside, nav, article, figure {
+display: block;
+}
+
+.clear:after {
+content: ".";
+height: 0;
+visibility: hidden;
+display: block;
+clear: both;
+}
+
+body{
+background: #ffffff;
+color: #000000;
+font-family: Arial;
+}
+
+#container{
+width:1120px;
+margin:150px auto 0;
+}
+
+
+#thebeatles{
+background: #ffffff url('beatleslogo.jpg') center no-repeat;
+float: left;
+width:550px;
+height: 340px;
+border:1px solid #000000;
+}
+
+#pinkfloyd{
+float:right;
+width:550px;
+height: 340px;
+background: #000000 url('floydlogo.jpg') no-repeat center 40px;
+}
+
+#imageBar{
+width:900px;
+height:80px;
+margin:65px auto 0px;
+border-bottom: 4px solid gray;
+padding:0px;
+}
+
+.draggedImage {
+zoom: 1;
+opacity: .2;
+-moz-opacity: .2;
+filter: alpha(opacity=20)
+}
+
+
+header{
+width:900px;
+margin:0 auto;
+}
+
+header h1{
+font-weight:normal;
+}
+
+.imageholders{
+width: 470px;
+margin: 240px auto 0px;
+}
+
+.imageContainers{
+float:left;
+width: 70px;
+height: 70px;
+margin:5px;
+padding:3px;
+border: 1px solid #aeb3bc;
+}
