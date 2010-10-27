@@ -29,7 +29,7 @@ margin:150px auto 0;
 
 
 #thebeatles{
-background: #ffffff url('beatleslogo.jpg') center no-repeat;
+background: #ffffff url('img/beatleslogo.jpg') center no-repeat;
 float: left;
 width:550px;
 height: 340px;
@@ -40,7 +40,7 @@ border:1px solid #000000;
 float:right;
 width:550px;
 height: 340px;
-background: #000000 url('floydlogo.jpg') no-repeat center 40px;
+background: #000000 url('img/floydlogo.jpg') no-repeat center 40px;
 }
 
 #imageBar{
